@@ -103,5 +103,8 @@
     <Resource Include="Assets\Images\Trainings.png" />
     <Resource Include="Assets\Images\Workout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Mulish.ttf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

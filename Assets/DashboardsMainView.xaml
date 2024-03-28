@@ -14,6 +14,8 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
         <SolidColorBrush x:Key="NavBarMenuForgroundSelectionColor" Color="#9A603F" />
         <SolidColorBrush x:Key="NavBarMenuBackgroundSelectionColor" Color="#F5EFEC"/>
         <SolidColorBrush x:Key="NavBarMenuForgroundColor" Color="#000000" Opacity="1" />
+        <SolidColorBrush x:Key="HeaderDateForgroundColor" Color="#898891" Opacity="1" />
+
 
 
         <Style TargetType="TextBlock" x:Key="SideNavbarMenuTitle">
@@ -21,6 +23,30 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
             <Setter Property="FontSize"  Value="14"/>
             <Setter Property="FontWeight"  Value="Regular"/>
             <Setter Property="FontFamily"  Value="/assets/fonts/#urbanist"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="DashboardLeftTitleHeader">
+            <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
+            <Setter Property="FontSize"  Value="24"/>
+            <Setter Property="FontWeight"  Value="SemiBold"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#urbanist"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="DashboardLeftSubTitleHeader">
+            <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
+            <Setter Property="FontSize"  Value="16"/>
+            <Setter Property="FontWeight"  Value="Regular"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#urbanist"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="DashboardLeftDay">
+            <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
+            <Setter Property="FontSize"  Value="20"/>
+            <Setter Property="FontWeight"  Value="Medium"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#mulish"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="DashboardDate">
+            <Setter Property="Foreground"  Value="{StaticResource HeaderDateForgroundColor}"/>
+            <Setter Property="FontSize"  Value="14"/>
+            <Setter Property="FontWeight"  Value="Regular"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#mulish"/>
         </Style>
         <Style TargetType="ToggleButton" x:Key="SideNavbarToggleButtonStyle">
             <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
@@ -313,7 +339,7 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Border Grid.Row="0" CornerRadius="15" Margin="24" Height="90" Background="White">
-                <Grid HorizontalAlignment="Stretch">
+                <Grid HorizontalAlignment="Stretch" Margin="25,10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
@@ -325,6 +351,22 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Welcome Back, Peter!" Grid.Row="0" VerticalAlignment="Center" Style="{StaticResource DashboardLeftTitleHeader}"></TextBlock>
+                        <TextBlock Text="Ready to give your brain a workout?" Grid.Row="1" Margin="0,10,0,0" VerticalAlignment="Center" Style="{StaticResource DashboardLeftSubTitleHeader}"></TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Monday" Grid.Row="0" VerticalAlignment="Center" Style="{StaticResource DashboardLeftDay}"></TextBlock>
+                        <TextBlock Text="February 22, 2023" Grid.Row="1" Margin="0,10,0,0" VerticalAlignment="Center" Style="{StaticResource DashboardDate}"></TextBlock>
+                    </Grid>
                 </Grid>
             </Border>
             <Grid Grid.Row="1">

@@ -1,7 +1,7 @@
 using System;
 using System.Windows;
 
-namespace Dashboards
+namespace TMKUnityTestTask
 {
     /// <summary>
     /// Interaction logic for App.xaml

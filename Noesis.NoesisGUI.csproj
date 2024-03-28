@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{68BCFDD2-82B6-1F51-66B5-D10CFCDE6482}</ProjectGuid>
+    <ProjectGuid>{D18A5E1D-E0A5-8005-84D2-E6B28E247497}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Noesis.NoesisGUI</AssemblyName>

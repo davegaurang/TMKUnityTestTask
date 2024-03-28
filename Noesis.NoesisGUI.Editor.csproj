@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B799F834-882D-ABA3-B7E9-C59A1E0E9C0A}</ProjectGuid>
+    <ProjectGuid>{B1F3F4D4-3C0C-064C-A75F-16498E385B2C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Noesis.NoesisGUI.Editor</AssemblyName>
@@ -1047,7 +1047,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Noesis.NoesisGUI.csproj">
-      <Project>{68BCFDD2-82B6-1F51-66B5-D10CFCDE6482}</Project>
+      <Project>{D18A5E1D-E0A5-8005-84D2-E6B28E247497}</Project>
       <Name>Noesis.NoesisGUI</Name>
     </ProjectReference>
   </ItemGroup>
