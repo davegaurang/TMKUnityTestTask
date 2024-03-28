@@ -19,6 +19,27 @@ D:\Jay\Projects\TKM Unity Dashboard\Dashboards\Blend\obj\Debug\Dashboards-blend.
 D:\Jay\Projects\TKM Unity Dashboard\Dashboards\Blend\obj\Debug\Dashboards-blend.csproj.CopyComplete
 D:\Jay\Projects\TKM Unity Dashboard\Dashboards\Blend\obj\Debug\Dashboards.exe
 D:\Jay\Projects\TKM Unity Dashboard\Dashboards\Blend\obj\Debug\Dashboards.pdb
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\Dashboards.exe
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\Dashboards.pdb
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\Noesis.GUI.Extensions.dll
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\System.Buffers.dll
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\System.Memory.dll
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\System.Numerics.Vectors.dll
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards-blend.csproj.AssemblyReference.cache
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Assets\DashboardsMainView.baml
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Assets\DashboardsMainView.g.cs
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Blend\App.g.cs
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards_MarkupCompile.cache
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards_MarkupCompile.lref
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Blend\App.baml
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards.g.resources
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards-blend.csproj.CoreCompileInputs.cache
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards-blend.csproj.CopyComplete
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards.exe
+D:\Jay\Projects\TKM Unity Dashboard\Dashboards - Copy\Blend\obj\Debug\Dashboards.pdb
 D:\Jay\Projects\TKM Unity Dashboard\TMKUnityTestTask\Blend\bin\Debug\Dashboards.exe
 D:\Jay\Projects\TKM Unity Dashboard\TMKUnityTestTask\Blend\bin\Debug\Dashboards.pdb
 D:\Jay\Projects\TKM Unity Dashboard\TMKUnityTestTask\Blend\bin\Debug\Microsoft.Xaml.Behaviors.dll

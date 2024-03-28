@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("dashboards.sln")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/leaderboard.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/resources.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/settings.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/trainings.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/images/workout.png")]
 
 

@@ -97,8 +97,11 @@
     <Resource Include="Assets\Images\Exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Packages\manifest.json" />
-    <None Include="Packages\packages-lock.json" />
+    <Resource Include="Assets\Images\LeaderBoard.png" />
+    <Resource Include="Assets\Images\Resources.png" />
+    <Resource Include="Assets\Images\Settings.png" />
+    <Resource Include="Assets\Images\Trainings.png" />
+    <Resource Include="Assets\Images\Workout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

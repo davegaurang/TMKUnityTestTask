@@ -156,10 +156,10 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                         <Image Width="20" Height="20">
                             <Image.Style>
                                 <Style TargetType="Image">
-                                    <Setter Property="Source" Value="/Assets/Images/HowItWorkUnselected.png"/>
+                                    <Setter Property="Source" Value="/Assets/Images/Resources.png"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding IsResources}" Value="true">
-                                            <Setter Property="Source" Value="/Assets/Images/HowItWorkSelected.png"/>
+                                            <Setter Property="Source" Value="/Assets/Images/Resources.png"/>
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
@@ -181,10 +181,10 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                         <Image Width="20" Height="20">
                             <Image.Style>
                                 <Style TargetType="Image">
-                                    <Setter Property="Source" Value="/Assets/Images/DashboardUnselected.png"/>
+                                    <Setter Property="Source" Value="/Assets/Images/Workout.png"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding IsWorkout}" Value="true">
-                                            <Setter Property="Source" Value="/Assets/Images/DashboardSelected.png"/>
+                                            <Setter Property="Source" Value="/Assets/Images/Workout.png"/>
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
@@ -204,10 +204,10 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                         <Image Width="20" Height="20">
                             <Image.Style>
                                 <Style TargetType="Image">
-                                    <Setter Property="Source" Value="/Assets/Images/HowItWorkUnselected.png"/>
+                                    <Setter Property="Source" Value="/Assets/Images/Trainings.png"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding IsTrainings}" Value="true">
-                                            <Setter Property="Source" Value="/Assets/Images/HowItWorkSelected.png"/>
+                                            <Setter Property="Source" Value="/Assets/Images/Trainings.png"/>
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
@@ -229,10 +229,10 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                         <Image Width="20" Height="20">
                             <Image.Style>
                                 <Style TargetType="Image">
-                                    <Setter Property="Source" Value="/Assets/Images/DashboardUnselected.png"/>
+                                    <Setter Property="Source" Value="/Assets/Images/LeaderBoard.png"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding IsLeaderBoard}" Value="true">
-                                            <Setter Property="Source" Value="/Assets/Images/DashboardSelected.png"/>
+                                            <Setter Property="Source" Value="/Assets/Images/LeaderBoard.png"/>
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
@@ -252,10 +252,10 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                         <Image Width="20" Height="20">
                             <Image.Style>
                                 <Style TargetType="Image">
-                                    <Setter Property="Source" Value="/Assets/Images/HowItWorkUnselected.png"/>
+                                    <Setter Property="Source" Value="/Assets/Images/Settings.png"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding IsSetting}" Value="true">
-                                            <Setter Property="Source" Value="/Assets/Images/HowItWorkSelected.png"/>
+                                            <Setter Property="Source" Value="/Assets/Images/Settings.png"/>
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>
