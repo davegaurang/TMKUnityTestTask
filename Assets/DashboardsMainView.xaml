@@ -93,6 +93,13 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
             <Setter Property="FontFamily"  Value="/assets/fonts/#inter"/>
 
         </Style>
+        <Style TargetType="ComboBox" x:Key="DashboardFilter">
+            <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
+            <Setter Property="FontSize"  Value="10.34"/>
+            <Setter Property="FontWeight"  Value="SemiBold"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#inter"/>
+
+        </Style>
         <Style TargetType="ToggleButton" x:Key="SideNavbarToggleButtonStyle">
             <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
             <Setter Property="HorizontalAlignment"  Value="Left"/>
@@ -633,18 +640,44 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" CornerRadius="15" Margin="24,0,24,12"  Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <Grid HorizontalAlignment="Stretch">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="18">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <TextBlock  Margin="10,5,0,0" Grid.Row="0" VerticalAlignment="Center" FontSize="15.52"
+                                         Style="{StaticResource DashboardProgressTitle}">
+                                <Run Text="Your Speed Drill Baseline:"></Run>
+                                <Run Text=""></Run>
+                                <Run Text="48.86s" Foreground="#4ADE80"></Run>
+                            </TextBlock>
+                            <TextBlock  Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="10.34"
+                                          Style="{StaticResource DashboardProgressTitle}">
+                                 <Run Text="Most Recent:"></Run>
+                                 <Run Text="48.95" FontWeight="SemiBold"></Run>
+                                 <Run Text="Best:"></Run>
+                                 <Run Text="48.9s" FontWeight="SemiBold" ></Run>
+                                 <Run Text="Initial"></Run>
+                                 <Run Text="48.9s" FontWeight="SemiBold"></Run>
+                            </TextBlock>
+                            <ComboBox Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="120" Margin="0,5,0,0" BorderBrush="LightGray"
+                                      HorizontalAlignment="Stretch" Background="White" Foreground="Black" >
+                                <ComboBoxItem Content="March 2024" IsSelected="True"/>
+                                <ComboBoxItem Content="March 2025"/>
+                            </ComboBox>
+
+                            <ListView Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Margin="0,12,0,0">
+                                <ListView.View>
+                                    <GridView>
+                                        
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
                         </Grid>
                     </Border>
                     <Border Grid.Row="1" CornerRadius="15" Margin="24,12,24,24"  Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">

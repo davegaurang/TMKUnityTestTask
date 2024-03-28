@@ -126,5 +126,8 @@
   <ItemGroup>
     <Resource Include="Assets\Fonts\Inter.ttf" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Plusjakartasans.ttf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
