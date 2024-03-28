@@ -9,5 +9,6 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/video/samplevideo.mp4")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/video/samplevideo.wmv")]
 
 

@@ -116,9 +116,15 @@
     <Content Include="Assets\Video\SampleVideo.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\Video\SampleVideo.wmv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\Fonts\SplineSans.ttf" />
+    <Resource Include="Assets\Fonts\Splinesans.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Inter.ttf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

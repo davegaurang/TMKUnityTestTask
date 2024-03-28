@@ -15,6 +15,7 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
         <SolidColorBrush x:Key="NavBarMenuBackgroundSelectionColor" Color="#F5EFEC"/>
         <SolidColorBrush x:Key="NavBarMenuForgroundColor" Color="#000000" Opacity="1" />
         <SolidColorBrush x:Key="HeaderDateForgroundColor" Color="#898891" Opacity="1" />
+        <SolidColorBrush x:Key="SubCardTitleColor" Color="#9AA0A6" />
 
 
 
@@ -58,13 +59,39 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
             <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
             <Setter Property="FontSize"  Value="24"/>
             <Setter Property="FontWeight"  Value="Regular"/>
-            <Setter Property="FontFamily"  Value="/assets/fonts/#SplineSans"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#urbanist"/>
+
+            <!--<Setter Property="FontFamily"  Value="/assets/fonts/#splinesans"/>-->
         </Style>
         <Style TargetType="TextBlock" x:Key="DashboardVideoName">
             <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
             <Setter Property="FontSize"  Value="16"/>
             <Setter Property="FontWeight"  Value="Regular"/>
-            <Setter Property="FontFamily"  Value="/assets/fonts/#SplineSans"/>
+            <!--<Setter Property="FontFamily"  Value="/assets/fonts/#splinesans"/>-->
+            <Setter Property="FontFamily"  Value="/assets/fonts/#urbanist"/>
+
+        </Style>
+        <Style TargetType="TextBlock" x:Key="DashboardUnNextTitleCard">
+            <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
+            <Setter Property="FontSize"  Value="16"/>
+            <Setter Property="FontWeight"  Value="Regular"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#urbanist"/>
+
+            <!--<Setter Property="FontFamily"  Value="/assets/fonts/#splinesans"/>-->
+        </Style>
+        <Style TargetType="TextBlock" x:Key="DashboardUnNextSubTagsCard">
+            <Setter Property="Foreground"  Value="{StaticResource SubCardTitleColor}"/>
+            <Setter Property="FontSize"  Value="14"/>
+            <Setter Property="FontWeight"  Value="Regular"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#urbanist"/>
+
+        </Style>
+        <Style TargetType="TextBlock" x:Key="DashboardProgressTitle">
+            <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
+            <Setter Property="FontSize"  Value="17.78"/>
+            <Setter Property="FontWeight"  Value="Regular"/>
+            <Setter Property="FontFamily"  Value="/assets/fonts/#inter"/>
+
         </Style>
         <Style TargetType="ToggleButton" x:Key="SideNavbarToggleButtonStyle">
             <Setter Property="Foreground"  Value="{StaticResource NavBarMenuForgroundColor}"/>
@@ -451,15 +478,19 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                                 <Border Name="Mask" Grid.Column="0" Width="{Binding ElementName=grdImage, Path=Width}" Height="{Binding ElementName=grdImage, Path=Height}"
                                                 Background="White"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                                 BorderBrush="#FF3B5998" 
-                                                CornerRadius="15">
+                                                CornerRadius="15" >
                                 </Border>
-                                <Border CornerRadius="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                    <MediaElement Name="Receiver" Stretch="Fill"  HorizontalAlignment="Stretch"
-                                         Source="D:\Jay\Projects\TKM Unity Dashboard\TMKUnityTestTask\Assets\Video\SampleVideo.mp4">
+                                <Border CornerRadius="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+
+                                    <MediaElement Name="Receiver" Stretch="Fill"  HorizontalAlignment="Stretch" 
+                                             Source="/Assets/Video/SampleVideo.wmv">
                                     </MediaElement>
-                                    <Border.OpacityMask>
+                                    <!--<MediaElement Name="Receiver" Stretch="Fill"  HorizontalAlignment="Stretch" 
+                                         Source="D:\Jay\Projects\TKM Unity Dashboard\TMKUnityTestTask\Assets\Video\SampleVideo.mp4">
+                                    </MediaElement>-->
+                                    <!--<Border.OpacityMask>
                                         <VisualBrush Visual="{Binding ElementName=Mask}"/>
-                                    </Border.OpacityMask>
+                                    </Border.OpacityMask>-->
                                 </Border>
                             </Grid>
                             <Slider Grid.Row="0" Background="Red" Maximum="100" Value="80" Minimum="0" VerticalAlignment="Bottom" Margin="0,0,0,50"></Slider>
@@ -470,7 +501,10 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                     <Grid Grid.Row="1" Margin="0,12,0,0">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
+
                             <RowDefinition Height="Auto"></RowDefinition>
                         </Grid.RowDefinitions>
                         <Grid Margin="18,10,18,10">
@@ -482,6 +516,107 @@ d:DesignHeight="900" d:DesignWidth="1200" mc:Ignorable="d">
                                 Fill="#9A603F" VerticalAlignment="Center"/>
                             <TextBlock Text="Up Next" Margin="10,0,0,0" Grid.Column="1" VerticalAlignment="Center" Style="{StaticResource DashboardContinue}"></TextBlock>
                         </Grid>
+                        <Border  Grid.Row="1" BorderThickness="1" CornerRadius="15" BorderBrush="{StaticResource NavBarMenuForgroundSelectionColor}">
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse Grid.Column="0" Width="52" Height="52">
+                                    <Ellipse.Fill>
+                                        <SolidColorBrush Color="#F5EFEC"></SolidColorBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <Path Grid.Column="0" Width="24" Height="24"
+                                      Data="M22.4999 7.0323C22.958 4.81109 20.7391 2.26857 18.4999 2.0323C17.3297 -0.68041 14.2819 -0.409918 12.4999 2.0323C10.7186 -0.408984 6.67077 -0.6817 5.49991 2.0323C3.25936 2.26875 1.04217 4.81261 1.49991 7.0323C-0.169062 8.40554 0.0967216 10.4453 1.49991 12.0323C-0.824842 15.1063 1.48937 20.0323 5.49991 20.0323C6.78057 22.6555 10.7779 22.3923 12.4999 20.0323C14.2234 22.3943 17.2205 22.653 18.4999 20.0323C22.5004 20.041 24.8253 15.1072 22.4999 12.0323C23.905 10.4433 24.1668 8.40385 22.4999 7.0323ZM8.49991 21.0323C6.47375 21.0323 5.17965 18.601 6.49991 17.0323C6.75505 16.7292 6.80861 16.2828 6.49991 16.0323C6.19121 15.7819 5.755 15.7292 5.49991 16.0323C4.89031 16.7566 4.44866 17.0714 4.49991 18.0323C1.75063 17.7454 0.68248 15.0221 2.49991 13.0323C2.51981 13.0544 3.04551 12.1844 4.49991 12.0323C4.47599 12.4935 5.34942 12.5803 5.49991 13.0323C5.59988 13.3326 5.19475 14.0323 5.49991 14.0323C5.99119 14.0323 6.65345 13.4934 6.49991 13.0323C6.08345 11.7813 6.22583 10.4412 7.49991 10.0323C7.88053 9.91011 8.62435 9.40607 8.49991 9.0323C8.37547 8.65853 7.88071 7.90993 7.49991 8.0323C7.33396 8.08556 7.65467 8.95932 7.49991 9.0323C7.21102 8.30594 6.85578 6.55637 7.49991 6.0323C7.80825 5.78138 7.75541 5.33505 7.49991 5.0323C7.24442 4.72955 6.80825 4.78147 6.49991 5.0323C5.24414 6.05406 4.76986 7.69706 5.49991 9.0323C5.01085 9.56283 5.54079 10.0323 5.49991 10.0323C4.43569 10.0323 3.29867 10.4571 2.49991 11.0323C1.61007 9.93841 2.24409 8.80128 3.49991 8.0323C3.78922 7.85516 3.61461 7.3476 3.49991 7.0323C2.96726 5.56771 3.57671 4.0323 5.49991 4.0323C5.82769 4.0323 6.41549 3.34528 6.49991 3.0323C6.78165 1.9878 7.39812 1.0323 8.49991 1.0323C9.84034 1.0323 11.4999 2.7161 11.4999 4.0323V18.0323C11.4999 19.3485 9.84034 21.0323 8.49991 21.0323ZM21.4999 11.0323C20.6351 10.4096 19.4482 10.0149 18.4999 10.0323C18.3356 9.69413 17.7622 9.31685 17.4999 9.0323C18.2294 7.69813 18.7568 6.05495 17.4999 5.0323C17.1914 4.78143 16.7554 4.72955 16.4999 5.0323C16.2444 5.33509 16.1916 5.78143 16.4999 6.0323C17.144 6.55633 16.7889 8.30594 16.4999 9.0323C16.3451 8.95932 16.6659 8.08556 16.4999 8.0323C16.1193 7.91002 15.6244 8.65858 15.4999 9.0323C15.3755 9.40602 15.1193 9.91011 15.4999 10.0323C16.774 10.4412 17.9164 11.7813 17.4999 13.0323C17.3755 13.406 17.1193 13.9101 17.4999 14.0323C17.8784 14.1538 18.3748 13.4079 18.4999 13.0323C18.6504 12.5802 18.5239 12.4935 18.4999 12.0323C20.2036 12.2105 21.4999 13.3375 21.4999 15.0323C21.4999 16.7408 20.193 17.8557 18.4999 18.0323C18.5511 17.0752 19.1119 16.7593 18.4999 16.0323C18.2449 15.7291 17.8086 15.7819 17.4999 16.0323C17.1912 16.2828 16.2448 16.7292 16.4999 17.0323C17.8178 18.5982 17.5271 21.0323 15.4999 21.0323C14.1595 21.0323 12.4999 19.3485 12.4999 18.0323V4.0323C12.4999 2.71615 14.1594 1.0323 15.4999 1.0323C16.6017 1.0323 17.2182 1.98784 17.4999 3.0323C17.5864 3.35294 18.1611 4.04391 18.4999 4.0323C20.1983 3.97098 21.0788 5.44049 20.4999 7.0323C20.3852 7.3476 20.2106 7.85516 20.4999 8.0323C21.757 8.80204 22.3888 9.9397 21.4999 11.0323Z" 
+                                      Fill="#9A603F"/>
+
+                                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Tapping" HorizontalAlignment="Stretch" Margin="5,0,0,5" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Style="{StaticResource DashboardUnNextTitleCard}"></TextBlock>
+                                    <TextBlock Text="Basic Training" Grid.Column="0" Grid.Row="1"
+                                               HorizontalAlignment="Stretch" Margin="5,0,0,0" 
+                                               VerticalAlignment="Center" Style="{StaticResource DashboardUnNextSubTagsCard}"></TextBlock>
+                                    <Ellipse Grid.Column="1" Grid.Row="1" Width="8" Height="8" Margin="5,0,0,0"  HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource SubCardTitleColor}"></Ellipse>
+                                    <TextBlock Text="John Kennedy" Grid.Column="2" Grid.Row="1"
+                                    HorizontalAlignment="Stretch" Margin="5,0,0,0" 
+                                    VerticalAlignment="Center" Style="{StaticResource DashboardUnNextSubTagsCard}"></TextBlock>
+                                    <Ellipse Grid.Column="3" Grid.Row="1" Width="8" Height="8" Margin="5,0,0,0"  HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource SubCardTitleColor}"></Ellipse>
+                                    <TextBlock Text="Training" Grid.Column="4" Grid.Row="1"
+                                        HorizontalAlignment="Stretch" Margin="5,0,0,0" 
+                                        VerticalAlignment="Center" Style="{StaticResource DashboardUnNextSubTagsCard}"></TextBlock>
+
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <Border  Grid.Row="2" BorderThickness="1" Margin="0,5,0,0" CornerRadius="15" BorderBrush="{StaticResource NavBarMenuForgroundSelectionColor}">
+                            <Grid Margin="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Ellipse Grid.Column="0" Width="52" Height="52">
+                                    <Ellipse.Fill>
+                                        <SolidColorBrush Color="#F5EFEC"></SolidColorBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <Path Grid.Column="0" Width="24" Height="24"
+                                      Data="M22.4999 7.0323C22.958 4.81109 20.7391 2.26857 18.4999 2.0323C17.3297 -0.68041 14.2819 -0.409918 12.4999 2.0323C10.7186 -0.408984 6.67077 -0.6817 5.49991 2.0323C3.25936 2.26875 1.04217 4.81261 1.49991 7.0323C-0.169062 8.40554 0.0967216 10.4453 1.49991 12.0323C-0.824842 15.1063 1.48937 20.0323 5.49991 20.0323C6.78057 22.6555 10.7779 22.3923 12.4999 20.0323C14.2234 22.3943 17.2205 22.653 18.4999 20.0323C22.5004 20.041 24.8253 15.1072 22.4999 12.0323C23.905 10.4433 24.1668 8.40385 22.4999 7.0323ZM8.49991 21.0323C6.47375 21.0323 5.17965 18.601 6.49991 17.0323C6.75505 16.7292 6.80861 16.2828 6.49991 16.0323C6.19121 15.7819 5.755 15.7292 5.49991 16.0323C4.89031 16.7566 4.44866 17.0714 4.49991 18.0323C1.75063 17.7454 0.68248 15.0221 2.49991 13.0323C2.51981 13.0544 3.04551 12.1844 4.49991 12.0323C4.47599 12.4935 5.34942 12.5803 5.49991 13.0323C5.59988 13.3326 5.19475 14.0323 5.49991 14.0323C5.99119 14.0323 6.65345 13.4934 6.49991 13.0323C6.08345 11.7813 6.22583 10.4412 7.49991 10.0323C7.88053 9.91011 8.62435 9.40607 8.49991 9.0323C8.37547 8.65853 7.88071 7.90993 7.49991 8.0323C7.33396 8.08556 7.65467 8.95932 7.49991 9.0323C7.21102 8.30594 6.85578 6.55637 7.49991 6.0323C7.80825 5.78138 7.75541 5.33505 7.49991 5.0323C7.24442 4.72955 6.80825 4.78147 6.49991 5.0323C5.24414 6.05406 4.76986 7.69706 5.49991 9.0323C5.01085 9.56283 5.54079 10.0323 5.49991 10.0323C4.43569 10.0323 3.29867 10.4571 2.49991 11.0323C1.61007 9.93841 2.24409 8.80128 3.49991 8.0323C3.78922 7.85516 3.61461 7.3476 3.49991 7.0323C2.96726 5.56771 3.57671 4.0323 5.49991 4.0323C5.82769 4.0323 6.41549 3.34528 6.49991 3.0323C6.78165 1.9878 7.39812 1.0323 8.49991 1.0323C9.84034 1.0323 11.4999 2.7161 11.4999 4.0323V18.0323C11.4999 19.3485 9.84034 21.0323 8.49991 21.0323ZM21.4999 11.0323C20.6351 10.4096 19.4482 10.0149 18.4999 10.0323C18.3356 9.69413 17.7622 9.31685 17.4999 9.0323C18.2294 7.69813 18.7568 6.05495 17.4999 5.0323C17.1914 4.78143 16.7554 4.72955 16.4999 5.0323C16.2444 5.33509 16.1916 5.78143 16.4999 6.0323C17.144 6.55633 16.7889 8.30594 16.4999 9.0323C16.3451 8.95932 16.6659 8.08556 16.4999 8.0323C16.1193 7.91002 15.6244 8.65858 15.4999 9.0323C15.3755 9.40602 15.1193 9.91011 15.4999 10.0323C16.774 10.4412 17.9164 11.7813 17.4999 13.0323C17.3755 13.406 17.1193 13.9101 17.4999 14.0323C17.8784 14.1538 18.3748 13.4079 18.4999 13.0323C18.6504 12.5802 18.5239 12.4935 18.4999 12.0323C20.2036 12.2105 21.4999 13.3375 21.4999 15.0323C21.4999 16.7408 20.193 17.8557 18.4999 18.0323C18.5511 17.0752 19.1119 16.7593 18.4999 16.0323C18.2449 15.7291 17.8086 15.7819 17.4999 16.0323C17.1912 16.2828 16.2448 16.7292 16.4999 17.0323C17.8178 18.5982 17.5271 21.0323 15.4999 21.0323C14.1595 21.0323 12.4999 19.3485 12.4999 18.0323V4.0323C12.4999 2.71615 14.1594 1.0323 15.4999 1.0323C16.6017 1.0323 17.2182 1.98784 17.4999 3.0323C17.5864 3.35294 18.1611 4.04391 18.4999 4.0323C20.1983 3.97098 21.0788 5.44049 20.4999 7.0323C20.3852 7.3476 20.2106 7.85516 20.4999 8.0323C21.757 8.80204 22.3888 9.9397 21.4999 11.0323Z" 
+                                      Fill="#9A603F"/>
+
+                                <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Tapping" HorizontalAlignment="Stretch" Margin="5,0,0,5" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Style="{StaticResource DashboardUnNextTitleCard}"></TextBlock>
+                                    <TextBlock Text="Basic Training" Grid.Column="0" Grid.Row="1"
+                                               HorizontalAlignment="Stretch" Margin="5,0,0,0" 
+                                               VerticalAlignment="Center" Style="{StaticResource DashboardUnNextSubTagsCard}"></TextBlock>
+                                    <Ellipse Grid.Column="1" Grid.Row="1" Width="8" Height="8" Margin="5,0,0,0"  HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource SubCardTitleColor}"></Ellipse>
+                                    <TextBlock Text="John Kennedy" Grid.Column="2" Grid.Row="1"
+                                    HorizontalAlignment="Stretch" Margin="5,0,0,0" 
+                                    VerticalAlignment="Center" Style="{StaticResource DashboardUnNextSubTagsCard}"></TextBlock>
+                                    <Ellipse Grid.Column="3" Grid.Row="1" Width="8" Height="8" Margin="5,0,0,0"  HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{StaticResource SubCardTitleColor}"></Ellipse>
+                                    <TextBlock Text="Training" Grid.Column="4" Grid.Row="1"
+                                        HorizontalAlignment="Stretch" Margin="5,0,0,0" 
+                                        VerticalAlignment="Center" Style="{StaticResource DashboardUnNextSubTagsCard}"></TextBlock>
+
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <Border Grid.Row="4" CornerRadius="15" Margin="0,12,0,24"  Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                            <Grid VerticalAlignment="Center" Margin="18">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Course Progress" Margin="10,0,0,0" Grid.Row="0" VerticalAlignment="Center" 
+                                           Style="{StaticResource DashboardProgressTitle}"></TextBlock>
+                                
+                                <TextBlock Text="75% Complete" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="11.78"
+                                           Style="{StaticResource DashboardProgressTitle}"></TextBlock>
+                                <ProgressBar Grid.Row="2" Height="10" Value="30" Margin="10,10,10,0" Maximum="100" Foreground="#EDA25B" Background="#BBBBBB"></ProgressBar>
+                            </Grid>          
+                        </Border>
                         <!--<ListView ItemsSource="{Binding UpNextList}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
