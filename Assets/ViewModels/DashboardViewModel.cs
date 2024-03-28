@@ -166,7 +166,7 @@ namespace Dashboards.Assets.ViewModels
                 }
             }
         }
-
+      
 
         public DashboardViewModel()
         {

@@ -106,5 +106,19 @@
   <ItemGroup>
     <Resource Include="Assets\Fonts\Mulish.ttf" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Video\SampleVideo.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\SplineSans.ttf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
