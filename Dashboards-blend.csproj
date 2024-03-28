@@ -58,6 +58,7 @@
     <ApplicationDefinition Include="Blend\App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="Assets\Models\BaselineModel.cs" />
     <Compile Include="Assets\ViewModels\DashboardViewModel.cs" />
     <Compile Include="Blend\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -113,6 +114,7 @@
     <Resource Include="Assets\Images\Profile.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Assets\Images\Graph.png" />
     <Content Include="Assets\Video\SampleVideo.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

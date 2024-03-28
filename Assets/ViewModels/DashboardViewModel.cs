@@ -1,5 +1,7 @@
-﻿using System;
+﻿using NoesisGUIExtensions;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
@@ -166,11 +168,51 @@ namespace Dashboards.Assets.ViewModels
                 }
             }
         }
-      
+        private ObservableCollection<BaselineModel> _baselineList { get; set; }
+        public ObservableCollection<BaselineModel> BaselineList
+        {
+            get { return _baselineList; }
+            set
+            {
+                _baselineList = value;
+                OnPropertyChanged("BaselineList");
+            }
+        }
+
+        private ObservableCollection<PlayListModel> _upNextPlayList { get; set; }
+        public ObservableCollection<PlayListModel> UpNextPlayList
+        {
+            get { return _upNextPlayList; }
+            set
+            {
+                _upNextPlayList = value;
+                OnPropertyChanged("UpNextPlayList");
+            }
+        }
+
 
         public DashboardViewModel()
         {
-                
+            BaselineList = new ObservableCollection<BaselineModel>()
+            {
+                new BaselineModel("Feb 2024",2.58M,100,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,50,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,50,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,50,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,50,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,50,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,50,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,20,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,20,"$3.4K"),
+                new BaselineModel("Feb 2024",2.58M,20,"$3.4K"),
+            };
+
+            UpNextPlayList = new ObservableCollection<PlayListModel>()
+            {
+                new PlayListModel("Tapping","Basic Training","John Kennedy","Training"),
+                new PlayListModel("Tapping1","Basic Training1","John Kennedy1","Training1"),
+                new PlayListModel("Tapping2","Basic Training2","John Kennedy2","Training2"),
+            };
         }
     }
 }

@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\DashboardsMainView.xaml.cs" />
     <Compile Include="Assets\ViewModels\DashboardViewModel.cs" />
+    <Compile Include="Assets\Models\BaselineModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
